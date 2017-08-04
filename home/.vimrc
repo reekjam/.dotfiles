@@ -38,10 +38,23 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 
+" UltiSnips "
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<option>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" end UltiSnips "
+
 call vundle#end()
 filetype plugin indent on
 
-colorscheme predawn
+colorscheme one
 
 hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 set t_Co=256
@@ -134,7 +147,7 @@ set backupskip=/tmp/*,/private/tmp/*
 
 " vim-airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='tomorrow'
+let g:airline_theme='light'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
